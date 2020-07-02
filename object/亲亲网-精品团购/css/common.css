@@ -50,9 +50,9 @@ a{color:white; text-decoration: none; font-size: 12px;}
 .logoRight .myShangCheng{ width:110px; height:40px; background:#FAFAFA; display:block; border:1px solid #F0F0F0; line-height:40px; font-size:13px; color:#555555; /* border-bottom:none; */z-index:2; position:relative; float:left;}
 .logoRight .myGouWuChe{ width:125px; height:40px; background:#FAFAFA; display:block; border:1px solid #F0F0F0; line-height:40px; font-size:13px; color:#555555;/*  border-bottom:none; */z-index:2; position:relative; float:right;}
 .logoRight .myShangCheng:hover,.myGouWuChe:hover{ color:#555555; background:#fff;}
-.myShangCheng span{ width:16px; height:16px; background:url(../img/top_bg.png) -100px 0px; display:inline-block; margin:12px 0 0 10px;}
-.myGouWuChe span{width:20px; height:16px; background:url(../img/top_bg.png) -120px 0px; display:inline-block; margin:12px 0 0 10px;}
-.myShangCheng i,.myGouWuChe i{ background:url(../img/arrow-all-down.jpg) no-repeat left center; margin:0 0 2px 0; display:inline-block; width:8px; height:4px;}
+.myShangCheng span{ width:16px; height:16px; background:url(../images/top_bg.png) -100px 0px; display:inline-block; margin:12px 0 0 10px;}
+.myGouWuChe span{width:20px; height:16px; background:url(../images/top_bg.png) -120px 0px; display:inline-block; margin:12px 0 0 10px;}
+.myShangCheng i,.myGouWuChe i{ background:url(../images/arrow-all-down.jpg) no-repeat left center; margin:0 0 2px 0; display:inline-block; width:8px; height:4px;}
 .scIn{ width:308px; height:196px; background:#fff;  border:1px solid #F0F0F0; z-index:2; position:absolute; top:86px; right:196px; display:none;}
 .scIn span{ width:308px; height:42px; display:block; line-height:42px; text-align:right; border-bottom:1px solid #DCDCDC;}
 .scIn span a{ color:#005EA5;}
