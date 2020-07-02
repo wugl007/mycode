@@ -6,8 +6,8 @@ function Product() {
     this.price='';
     this.description = '';
     this.youhuijia='';
-    this.zhekou = ''
-    this.sales = ''
+    this.zhekou = '';
+    this.sales = '';
     this.image=''
 }
 Product.prototype={
@@ -43,7 +43,7 @@ window.onload=function() {
     product1.youhuijia = 1000
     product1.sales = 300
     product1.zhekou = 3.5
-    product1.image = 'img/boutque10_r2_c2.jpg'
+    product1.image = 'images/boutque10_r2_c2.jpg';
 
     /*ÊµÀý2*/
     var product2 = new Product()
@@ -52,7 +52,7 @@ window.onload=function() {
     product2.youhuijia = 1000
     product2.sales = 300
     product2.zhekou = 3.5
-    product2.image = 'img/boutque10_r2_c2.jpg'
+    product2.image = 'images/boutque10_r2_c2.jpg'
 
     /*ÊµÀý3*/
     var product3 = new Product()
@@ -61,7 +61,7 @@ window.onload=function() {
     product3.youhuijia = 1000
     product3.sales = 300
     product3.zhekou = 3.5
-    product3.image = 'img/boutque10_r2_c2.jpg'
+    product3.image = 'images/boutque10_r2_c2.jpg'
 
 
 
