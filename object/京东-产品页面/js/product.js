@@ -13,18 +13,32 @@
 // // }
 //定义产品对象
 function Product(){
-    this.name = 'HM休闲服登山包';
-    this.description = '棒棒的，登山一流，服务一流，一口气登上珠穆朗玛峰';
-    this.normalPrice = '144';
-    this.groupbuyPrice = '120';
+    this.name = '';
+    this.description = '';
+    this.normalPrice = '';
+    this.groupbuyPrice = '';
     this.buySum = 100;
-    this.image = [
-        {small:'images/s11.jpg',big:'../images/s11.jpg'},
-        {small:'images/s12.jpg',big:'../images/s12.jpg'},
-        {small:'images/s13.jpg',big:'../images/s13.jpg'}
+    this.images = [
+        {small:'',big:''},
+        {small:'',big:''},
+        {small:'',big:''}
     ];
 
 }
+
+
+Product.prototype = {
+        bindDOMImage:function () {
+            var str = '';
+            for(var i = 0,len = this.images.length; i < len; i++){
+                str += '<li>';
+                str += '<img class="etalage_thumb_image" src="'+ this.images[i].small+'" class="img-responsive" />';
+                str += '<img class="'+ this.images[i].big+'" src="images/s13.jpg" class="img-responsive" />';
+                str += '</li>';
+            };
+
+        }
+};
 
 Product.prototype={
     /*普通购买*/
