@@ -1,11 +1,6 @@
 
-
-
-//页面的业务逻辑
 $(document).ready(function(){
 
-
-    /*开始编程*/
     /*产品相关*/
     /*实例化*/
     var product =  new Product()
@@ -23,18 +18,17 @@ $(document).ready(function(){
     product.bindDOMDetail()
     product.bindDOMImage()
 
-    /*绑定事件*/
-    $('#btnaddcart').click(function(){
-        /*购物车新增一个产品*/
-        console.log('12222')
-        cart.products.push(product)
-        ///*更新购物车 - 重新绑定购物车*/
-        /*如果不封装，这里就可能产生代码重复*/
-        cart.bindBasic()
-        cart.bindList()
-        $(window).scrollTop(0);
-    });
 
+    /*绑定事件*/
+    $('#btnaddcart').click(function () {
+        /*购物车新增一个产品*/
+        cart.products.push(product);
+        ///*更新购物车 - 重新绑定购物车*/
+       cart.bindBasic();
+       cart.bindList();
+       //滑动返回最上层
+       $(window).scrollTop(0);
+    });
 
 
 
