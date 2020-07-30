@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-      <swiper>
+      <swiper :options="swiperOption">
         <swiper-slide v-for="(page,index) of pages" :key="index">
           <div class="icon"
           v-for="item of page"
@@ -18,26 +18,21 @@
 <script>
 export default {
   name: 'Icons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [
-        {id: '001', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '002', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '003', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '004', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '005', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '006', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '007', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '008', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'},
-        {id: '009', imgUrl: 'https://s.qunarzz.com/homenode/images/touchheader/piao.png', desc: '热门景点'}
-      ]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       // 创建分页 多页拖动
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
