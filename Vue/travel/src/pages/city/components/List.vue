@@ -5,7 +5,7 @@
          <div class="title border-topbottom" >当前城市</div>
          <div class="button-list">
            <div class="button-wrapper">
-             <div class="button">{{this.$store.state.city}}</div>
+             <div class="button">{{this.currentCity}}</div>
            </div>
          </div>
        </div>
@@ -41,6 +41,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex' // 创建mapState，mapMutations方法
 export default {
   name: 'CityList',
   props: {
@@ -48,14 +49,22 @@ export default {
     cities: Object,
     letter: String
   },
+  computed: {
+    ...mapState({
+      currentCity: 'city' // 将vuex中的数据（city）映射过来，用变量currentCity表示
+    })
+  },
   methods: {
     handleCityClick (city) {
-      this.$store.commit('changeCity', city)
+      this.changeCity(city) // 这里可以直接使用映射过来的方法传值
       this.$router.push('/')
-    }
+    },
+    ...mapMutations(['changeCity']) // 将vuex中的方法映射过来
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper, {
+      click: true
+    })
   },
   watch: {
     letter () {
