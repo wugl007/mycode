@@ -15,7 +15,7 @@ import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
-import { mapState } from 'vuex'
+import { mapState } from 'vuex' // 用于映射数据
 export default {
   name: 'Home',
   components: {
@@ -35,7 +35,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city'])
+    ...mapState(['city']) //映射city数据
   },
   methods: {
     getHomeInfo () {
@@ -58,7 +58,7 @@ export default {
     this.getHomeInfo()
   },
   activated () {
-    if (this.lastCity !== this.city) {
+    if (this.lastCity !== this.city) { // 解决keep-alive的影响
       this.lastCity = this.city
       this.getHomeInfo() // 重新执行请求
     }

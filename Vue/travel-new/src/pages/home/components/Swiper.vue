@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     showSwipe () {
-      return this.list.length
+      return this.list.length // 增加一个挂载判断，先接受数据再挂载dom，解决轮播呈现在最后一张的bug
     }
   }
 }

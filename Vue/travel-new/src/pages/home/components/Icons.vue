@@ -24,7 +24,7 @@ export default {
   data () {
     return {
       swiperOption: {
-        autoplay: false
+        autoplay: false // 取消自动轮播
       }
     }
   },
@@ -32,7 +32,7 @@ export default {
     pages () {
       // 创建分页 多页拖动
       const pages = []
-      this.list.forEach((item, index) => {
+      this.list.forEach((item, index) => { // 分页
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

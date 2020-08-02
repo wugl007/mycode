@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      this.changeCity(city)
+      this.changeCity(city) //将city传到首页
       this.$router.push('/')
     },
     ...mapMutations(['changeCity'])

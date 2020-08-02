@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     handletterClick (e) {
-      this.$emit('change', e.target.innerText)
+      this.$emit('change', e.target.innerText) // 创建监视
     },
     handleTouchStart () {
       this.touchStatus = true
