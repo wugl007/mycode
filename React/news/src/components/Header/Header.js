@@ -37,7 +37,9 @@ class AppHeader extends Component {
     render() {
         return (
           <Fragment>
-              <img src={logo} className='app-header-logo' alt='logo'/>
+              <Link to="/">
+                  <img src={logo} className='app-header-logo' alt='logo'/>
+              </Link>
               <Menu  mode="horizontal" >
                   {this.getMenuItems()}
               </Menu>

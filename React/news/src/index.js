@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layout } from 'antd';
-import AppHeader from './components/Header/Header'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Detail from './containers/Detail/'
-import List from './containers/List/'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AppHeader from './components/Header/Header';
+import Login from './components/Login';
+import Detail from './containers/Detail/';
+import List from './containers/List/';
+import Vip from './containers/Vip/';
 import 'antd/dist/antd.css'; // 引用antd中的样式
-import './style.css'
+import './style.css';
 
 const { Header, Footer, Content } = Layout;
 ReactDOM.render(
@@ -16,9 +18,10 @@ ReactDOM.render(
                 <AppHeader />
             </Header>
             <Content className="content">
-
+                <Login />
                 <Switch>
-                    <Route path="/detail" component={Detail} />
+                    <Route path="/vip" component={Vip}/>
+                    <Route path="/detail/:id" component={Detail} />
                     <Route path="/:id?" component={List}/>
                 </Switch>
             </Content>

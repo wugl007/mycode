@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { List } from 'antd';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom'
 class PageList extends Component{
-    componentWillReceiveProps(nextProps) {
+
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const id = nextProps.match.params.id;
         axios.get('http://www.dell-lee.com/react/api/list.json?id='+ id)
             .then((res)=>{
@@ -12,6 +13,7 @@ class PageList extends Component{
                 })
             })
     }
+
     constructor(props) {
        super(props);
        this.state = {
@@ -25,7 +27,12 @@ class PageList extends Component{
                 style={{background: '#fff'}}
                 bordered
                 dataSource={this.state.data}
-                renderItem={item => (<List.Item>{item.title}</List.Item>)}
+                renderItem={item => (
+                    <List.Item>
+                        <Link to={`/detail/${item.id}`}>
+                            {item.title}
+                        </Link>
+                    </List.Item>)}
             />
         );
     }
