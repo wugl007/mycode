@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>heart</title>
+    <style>
+        * { margin:0; padding:0;}
+        .heart {
+            width: 220px;
+            height: 500px;
+            margin:80px auto;
+            position: relative;
+        }
+        .left, .right, .bottom {
+            width: 220px;
+            height: 220px;
+            background-color: red;
+            position: absolute;
+            animation:beat 1s infinite
+        }
+        .left {
+            left: -80px;
+        }
+        .right {
+            right: -80px;
+        }
+        .bottom {
+            top: 80px;
+            transform: scale(1) rotate(225deg);
+        }
+        .left, .right {
+           border-radius: 50%;
+        }
+        @keyframes beat {
+            0% {transform: scale(1) rotate(225deg)}
+            50% {transform: scale(1.1) rotate(225deg)}
+            100% {transform: scale(1) rotate(225deg)}
+        }
+
+    </style>
+</head>
+<body>
+<div class="heart">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+</div>
+</body>
+</html>
