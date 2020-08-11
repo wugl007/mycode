@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳动的按钮</title>
+    <style>
+        * {margin:0; padding:0;}
+        #box {
+            width: 400px;
+            height: 200px;
+            font:55px "微软雅黑";
+            line-height:150px;
+            color:#88f;
+            background-color: #ccf;
+            border-radius: 50%;
+            margin: 100px auto;
+            box-shadow:
+                    0 -15px 15px #88f inset,
+                    10px -15px 15px #44f inset,
+                    -10px -15px 15px #fff inset,
+                    0 15px #88f,
+                    -35px 40px 5px rgba(0,0,0,0.3);  /* 外边框阴影*/
+            transition:all 0.3s ease-in 0s;
+            text-align: center;
+        }
+        #box:hover{
+            box-shadow:
+                    0 -15px 15px #88f inset,
+                    10px -15px 15px #44f inset,
+                    -10px -15px 15px #fff inset,
+                    0 2px #88f,
+                    -8px 15px 5px rgba(0,0,0,0.3);
+            margin-top:115px;
+        }
+        #content{
+            text-shadow:3px -3px 1px #44f,-3px 3px 1px #fff;
+            transform:scale(1,0.8);
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="content">WGL</div>
+</div>
+</body>
+</html>
