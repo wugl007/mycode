@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转文字</title>
+    <style>
+        * {margin:0;padding:0;}
+        body {font:5rem "微软雅黑"; padding: 200px;}
+        .word {
+            margin:0.2rem;
+            color:#369;
+            position: relative;
+        }
+        .word:before, .word:after {
+            content: attr(data-word); /*data属性拓展*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: left top; /*以左上角为起点*/
+            transition: all 0.3s ease 0s;
+        }
+        .word:before{
+            color:#127;
+            z-index: 3;
+            transform:rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+        }
+        .word:after{
+            color:rgba(0,0,0,0.2);
+            transform:scale(1.1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            z-index:2;
+        }
+        .word:hover:before{
+            color:#fafafa;
+            transform:rotateX(0deg) rotateY(-40deg) rotateZ(0deg) skew(0deg,1deg);
+        }
+        .word:hover:after{
+            transform:scale(1.1,1) rotateX(0deg) rotateY(-40deg) rotateZ(0deg) skew(0deg,20deg);
+        }
+    </style>
+</head>
+<body>
+<span class="word" data-word="蓝">蓝</span>
+<span class="word" data-word="翔">翔</span>
+<span class="word" data-word="技">技</span>
+<span class="word" data-word="校">校</span>
+</body>
+</html>
